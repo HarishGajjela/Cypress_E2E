@@ -1,0 +1,22 @@
+Indentation - CTRL + k , CTRL + F
+To open Cypress Runner
+ npx cypress open
+
+To Run All the specs under e2e folder
+ npx cypress run // headless
+ npx cypress run --headed 
+
+ --headed - means browser will open
+
+To Run Single spec under e2e folder
+ npx cypress run –-spec cypress\e2e\mySpecs\test1.cy.js
+
+
+To Run All the specs under e2e folder using Chrome
+ npx cypress run --browser chrome
+ npx cypress run --browser edge
+
+ npx cypress run --browser edge --headed
+ -------------------------------------------------------------------
+
+  -------------------------------------------------------------------
