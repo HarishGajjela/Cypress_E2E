@@ -8,7 +8,7 @@ describe("Accessibility Test Suite", function () {
       cy.injectAxe();
     });
   
-    it("Accessibility Test Case", function () {
+    it.only("Accessibility Test Case", function () {
       //   cy.checkA11y();
       // cy.checkA11y("button");
       // cy.checkA11y({ exclude: ["button"] });

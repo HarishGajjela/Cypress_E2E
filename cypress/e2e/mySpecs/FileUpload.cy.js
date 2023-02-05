@@ -2,7 +2,7 @@ import 'cypress-file-upload'
 describe("File Upload Tests", () => {
 
     // npm install --save-dev cypress-file-upload
-    it('Single File Upload', () => {
+    it.only('Single File Upload', () => {
         cy.visit('https://the-internet.herokuapp.com/upload')
         cy.get("#file-upload").attachFile('test.pdf')
         cy.get("#file-submit").click()
@@ -10,7 +10,7 @@ describe("File Upload Tests", () => {
         cy.get("div[class='example'] h3").should('have.text', 'File Uploaded!')
     })
 
-    it('File Upload - Rename', () => {
+    it.only('File Upload - Rename', () => {
         cy.visit('https://the-internet.herokuapp.com/upload')
         cy.get("#file-upload").attachFile({ filePath: 'test.pdf', fileName: 'myTest.pdf' })
         cy.get("#file-submit").click()
@@ -26,7 +26,7 @@ describe("File Upload Tests", () => {
             .contains('test.pdf')
     })
 
-    it('Multiple Files Upload', () => {
+    it.only('Multiple Files Upload', () => {
         cy.visit('https://davidwalsh.name/demo/multiple-file-upload.php')
         cy.get("#filesToUpload").attachFile(['test.pdf', 'test1.pdf'])
         cy.wait(3000)

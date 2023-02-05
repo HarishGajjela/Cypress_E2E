@@ -1,6 +1,6 @@
 //Install npm install --save-dev @cypress-audit/lighthouse
 
-it("Lighthouse Testing", () => {
+it.only("Lighthouse Testing", () => {
     cy.visit("https://www.google.com/");
     // set your treshold
     // Thresholds are pass/fail criteria that specify the performance expectations of the system under test.
