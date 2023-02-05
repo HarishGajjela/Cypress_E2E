@@ -18,5 +18,28 @@ To Run All the specs under e2e folder using Chrome
 
  npx cypress run --browser edge --headed
  -------------------------------------------------------------------
-
+https://glebbahmutov.com/blog/the-awesome-battle/
   -------------------------------------------------------------------
+
+  Websites Used:
+  https://katalon-demo-cura.herokuapp.com/profile.php#login , John Doe/ThisIsNotAPassword
+  https://the-internet.herokuapp.com/basic_auth , admin/admin
+  https://opensource-demo.orangehrmlive.com/web/index.php/auth/login , Admin/admin123
+
+
+  https://the-internet.herokuapp.com/javascript_alerts
+  https://demo.nopcommerce.com/
+  https://www.zoho.com/commerce/free-demo.html
+  https://the-internet.herokuapp.com/upload
+  https://davidwalsh.name/demo/multiple-file-upload.php
+  https://www.htmlelements.com/demos/fileupload/shadow-dom/index.htm
+  https://the-internet.herokuapp.com/windows
+  https://the-internet.herokuapp.com/iframe
+  http://automationpractice.pl/index.php
+  https://demo.opencart.com/
+  https://swisnl.github.io/jQuery-contextMenu/demo.html
+  https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick3
+  http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html
+  https://www.countries-ofthe-world.com/flags-of-the-world.html
+  https://itera-qa.azurewebsites.net/home/automation
+  https://demo.opencart.com/admin/index.php

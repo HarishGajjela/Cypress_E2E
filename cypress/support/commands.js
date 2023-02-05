@@ -32,6 +32,7 @@
 /// <reference types="cypress-iframe" /> 
 /// <reference types="@4tw/cypress-drag-drop" /> 
 /// <reference types="cypress-file-upload" /> 
+import "@cypress-audit/lighthouse/commands";
 
 // -- This will gets Iframe across all files --
 Cypress.Commands.add('getIframe', (iframe) => {
@@ -61,3 +62,41 @@ Cypress.Commands.add("LoginApp",(email,password)=>{
     cy.get('#Password').type(email)
     cy.get('.button-1.login-button').click()
 })
+
+// Custom ommand for AXE-CORE Logging
+
+Cypress.Commands.add("customCheckAlly", () => {
+    const severityIndicatorIcons = {
+      minor: "⚪",
+      moderate: "🌕",
+      serious: "⭕",
+      critical: "⛔",
+    };
+  
+    function callback(violations) {
+      violations.forEach((violation) => {
+        const nodes = Cypress.$(
+          violation.nodes.map((node) => node.target).join(",")
+        );
+  
+        Cypress.log({
+          name: `${severityIndicatorIcons[violation.impact]} AllY`,
+          consoleProps: () => violation,
+          $el: nodes,
+          message: `[${violation.help}](${violation.helpUrl})`,
+        });
+  
+        violation.nodes.forEach(({ target }) => {
+          Cypress.log({
+            name: "ℹ▶",
+            consoleProps: () => violation,
+            $el: Cypress.$(target.join(",")),
+            message: target,
+          });
+        });
+      });
+    }
+  
+    cy.checkA11y(null, null, callback);
+  });
+  
